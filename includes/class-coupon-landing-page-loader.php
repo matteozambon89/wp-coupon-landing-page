@@ -6,8 +6,8 @@
  * @link       http://thetophat.org
  * @since      1.0.0
  *
- * @package    Coupon_Lading_Page
- * @subpackage Coupon_Lading_Page/includes
+ * @package    Coupon_Landing_Page
+ * @subpackage Coupon_Landing_Page/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Coupon_Lading_Page
- * @subpackage Coupon_Lading_Page/includes
+ * @package    Coupon_Landing_Page
+ * @subpackage Coupon_Landing_Page/includes
  * @author     Matteo Zambon <matteo@thetophat.org>
  */
-class Coupon_Lading_Page_Loader {
+class Coupon_Landing_Page_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

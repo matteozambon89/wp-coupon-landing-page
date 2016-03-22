@@ -9,8 +9,8 @@
  * @link       http://thetophat.org
  * @since      1.0.0
  *
- * @package    Coupon_Lading_Page
- * @subpackage Coupon_Lading_Page/includes
+ * @package    Coupon_Landing_Page
+ * @subpackage Coupon_Landing_Page/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Coupon_Lading_Page
- * @subpackage Coupon_Lading_Page/includes
+ * @package    Coupon_Landing_Page
+ * @subpackage Coupon_Landing_Page/includes
  * @author     Matteo Zambon <matteo@thetophat.org>
  */
-class Coupon_Lading_Page_i18n {
+class Coupon_Landing_Page_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Coupon_Lading_Page_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'coupon-lading-page',
+			'coupon-landing-page',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

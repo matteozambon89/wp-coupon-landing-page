@@ -22,7 +22,7 @@
  * @link       http://thetophat.org
  * @since      1.0.0
  *
- * @package    Coupon_Lading_Page
+ * @package    Coupon_Landing_Page
  */
 
 // If uninstall not called from WordPress, then exit.

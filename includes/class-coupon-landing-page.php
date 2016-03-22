@@ -9,8 +9,8 @@
  * @link       http://thetophat.org
  * @since      1.0.0
  *
- * @package    Coupon_Lading_Page
- * @subpackage Coupon_Lading_Page/includes
+ * @package    Coupon_Landing_Page
+ * @subpackage Coupon_Landing_Page/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Coupon_Lading_Page
- * @subpackage Coupon_Lading_Page/includes
+ * @package    Coupon_Landing_Page
+ * @subpackage Coupon_Landing_Page/includes
  * @author     Matteo Zambon <matteo@thetophat.org>
  */
-class Coupon_Lading_Page {
+class Coupon_Landing_Page {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Coupon_Lading_Page {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Coupon_Lading_Page_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Coupon_Landing_Page_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -68,7 +68,7 @@ class Coupon_Lading_Page {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'coupon-lading-page';
+		$this->plugin_name = 'coupon-landing-page';
 		$this->version = '1.0.0';
 
 		$this->load_dependencies();
@@ -83,10 +83,10 @@ class Coupon_Lading_Page {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Coupon_Lading_Page_Loader. Orchestrates the hooks of the plugin.
-	 * - Coupon_Lading_Page_i18n. Defines internationalization functionality.
-	 * - Coupon_Lading_Page_Admin. Defines all hooks for the admin area.
-	 * - Coupon_Lading_Page_Public. Defines all hooks for the public side of the site.
+	 * - Coupon_Landing_Page_Loader. Orchestrates the hooks of the plugin.
+	 * - Coupon_Landing_Page_i18n. Defines internationalization functionality.
+	 * - Coupon_Landing_Page_Admin. Defines all hooks for the admin area.
+	 * - Coupon_Landing_Page_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -100,33 +100,33 @@ class Coupon_Lading_Page {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-coupon-lading-page-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-coupon-landing-page-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-coupon-lading-page-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-coupon-landing-page-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-coupon-lading-page-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-coupon-landing-page-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-coupon-lading-page-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-coupon-landing-page-public.php';
 
-		$this->loader = new Coupon_Lading_Page_Loader();
+		$this->loader = new Coupon_Landing_Page_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Coupon_Lading_Page_i18n class in order to set the domain and to register the hook
+	 * Uses the Coupon_Landing_Page_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -134,7 +134,7 @@ class Coupon_Lading_Page {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Coupon_Lading_Page_i18n();
+		$plugin_i18n = new Coupon_Landing_Page_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -149,7 +149,7 @@ class Coupon_Lading_Page {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Coupon_Lading_Page_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Coupon_Landing_Page_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -165,7 +165,7 @@ class Coupon_Lading_Page {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Coupon_Lading_Page_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Coupon_Landing_Page_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -196,7 +196,7 @@ class Coupon_Lading_Page {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Coupon_Lading_Page_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Coupon_Landing_Page_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

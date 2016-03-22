@@ -8,8 +8,8 @@
  * @link       http://thetophat.org
  * @since      1.0.0
  *
- * @package    Coupon_Lading_Page
- * @subpackage Coupon_Lading_Page/public/partials
+ * @package    Coupon_Landing_Page
+ * @subpackage Coupon_Landing_Page/public/partials
  */
 ?>
 

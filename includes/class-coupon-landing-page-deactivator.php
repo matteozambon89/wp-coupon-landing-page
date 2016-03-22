@@ -6,8 +6,8 @@
  * @link       http://thetophat.org
  * @since      1.0.0
  *
- * @package    Coupon_Lading_Page
- * @subpackage Coupon_Lading_Page/includes
+ * @package    Coupon_Landing_Page
+ * @subpackage Coupon_Landing_Page/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Coupon_Lading_Page
- * @subpackage Coupon_Lading_Page/includes
+ * @package    Coupon_Landing_Page
+ * @subpackage Coupon_Landing_Page/includes
  * @author     Matteo Zambon <matteo@thetophat.org>
  */
-class Coupon_Lading_Page_Deactivator {
+class Coupon_Landing_Page_Deactivator {
 
 	/**
 	 * Short Description. (use period)
